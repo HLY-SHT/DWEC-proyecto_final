@@ -8,6 +8,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
 import { ListadoPeleasEventoComponent } from './listado-peleas-evento/listado-peleas-evento.component';
 import { ListadoPeleasAnioComponent } from './listado-peleas-anio/listado-peleas-anio.component';
 import { ListadoPeleasPeleadorComponent } from './listado-peleas-peleador/listado-peleas-peleador.component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ListadoPeleasPeleadorComponent } from './listado-peleas-peleador/listad
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
