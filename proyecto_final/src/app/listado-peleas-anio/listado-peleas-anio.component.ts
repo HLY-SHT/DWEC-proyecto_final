@@ -4,11 +4,12 @@ import { Ipeleas } from '../ipeleas';
 
 @Component({
   selector: 'app-listado-peleas-anio',
+  standalone: true,
   templateUrl: './listado-peleas-anio.component.html',
   styleUrls: ['./listado-peleas-anio.component.css']
 })
 export class ListadoPeleasAnioComponent {
-  apiKey: string = 'TU_API_KEY'; // Reemplaza con tu API key
+  apiKey: string = 'f579b1be4876950dbca83c4b18b4ff90d9bc2507'; // Reemplaza con tu API key
   anio: string = '';
   peleas: Ipeleas[] = [];
 

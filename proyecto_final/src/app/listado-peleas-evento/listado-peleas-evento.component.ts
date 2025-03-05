@@ -4,11 +4,12 @@ import { Ipeleas } from '../ipeleas';
 
 @Component({
   selector: 'app-listado-peleas-evento',
+  standalone: true,
   templateUrl: './listado-peleas-evento.component.html',
   styleUrls: ['./listado-peleas-evento.component.css']
 })
 export class ListadoPeleasEventoComponent {
-  apiKey: string = 'TU_API_KEY'; // Reemplaza con tu API key
+  apiKey: string = 'f579b1be4876950dbca83c4b18b4ff90d9bc2507'; // Reemplaza con tu API key
   evento: string = '';
   peleas: Ipeleas[] = [];
 
