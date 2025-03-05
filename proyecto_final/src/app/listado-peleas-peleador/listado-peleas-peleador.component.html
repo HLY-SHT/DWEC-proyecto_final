@@ -1,1 +1,25 @@
-<p>listado-peleas-peleador works!</p>
+<h2>Buscar Peleas por Peleador</h2>
+<input type="text" [(ngModel)]="peleador" placeholder="Ingrese el nombre del peleador">
+<button (click)="buscarPorPeleador()">Buscar</button>
+
+<div *ngIf="peleas.length > 0">
+  <h3>Resultados:</h3>
+  <table border="1">
+    <tr>
+      <th>Fecha</th>
+      <th>Evento</th>
+      <th>Peleador 1</th>
+      <th>Peleador 2</th>
+      <th>Ganador</th>
+      <th>Método</th>
+    </tr>
+    <tr *ngFor="let pelea of peleas">
+      <td>{{ pelea.date }}</td>
+      <td>{{ pelea.event }}</td>
+      <td>{{ pelea.fighter_1 }}</td>
+      <td>{{ pelea.fighter_2 }}</td>
+      <td>{{ pelea.winner }}</td>
+      <td>{{ pelea.method }}</td>
+    </tr>
+  </table>
+</div>

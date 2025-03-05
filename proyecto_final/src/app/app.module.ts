@@ -9,19 +9,21 @@ import { ListadoPeleasEventoComponent } from './listado-peleas-evento/listado-pe
 import { ListadoPeleasAnioComponent } from './listado-peleas-anio/listado-peleas-anio.component';
 import { ListadoPeleasPeleadorComponent } from './listado-peleas-peleador/listado-peleas-peleador.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    Pagina404Component,
-    ListadoPeleasEventoComponent,
-    ListadoPeleasAnioComponent,
-    ListadoPeleasPeleadorComponent
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ListadoPeleasEventoComponent,
+    ListadoPeleasAnioComponent,
+    ListadoPeleasPeleadorComponent
   ],
   providers: [
     provideHttpClient()
