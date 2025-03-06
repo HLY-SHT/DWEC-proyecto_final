@@ -1,25 +1,37 @@
-<h2>Buscar Peleas por Peleador</h2>
-<input type="text" [(ngModel)]="peleador" placeholder="Ingrese el nombre del peleador">
-<button (click)="buscarPorPeleador()">Buscar</button>
+<div class="container mt-5">
+  <div class="card p-4 shadow-lg">
+    <h2 class="text-center text-danger">Buscar Peleas por Peleador</h2>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" [(ngModel)]="peleador" placeholder="Ingrese el nombre del peleador">
+      <button class="btn btn-danger" (click)="buscarPorPeleador()">Buscar</button>
+    </div>
+  </div>
 
-<div *ngIf="peleas.length > 0">
-  <h3>Resultados:</h3>
-  <table border="1">
-    <tr>
-      <th>Fecha</th>
-      <th>Evento</th>
-      <th>Peleador 1</th>
-      <th>Peleador 2</th>
-      <th>Ganador</th>
-      <th>Método</th>
-    </tr>
-    <tr *ngFor="let pelea of peleas">
-      <td>{{ pelea.date }}</td>
-      <td>{{ pelea.event }}</td>
-      <td>{{ pelea.fighter_1 }}</td>
-      <td>{{ pelea.fighter_2 }}</td>
-      <td>{{ pelea.winner }}</td>
-      <td>{{ pelea.method }}</td>
-    </tr>
-  </table>
+  <div *ngIf="peleas.length > 0" class="mt-4">
+    <h3 class="text-center text-white">Resultados:</h3>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped table-bordered">
+        <thead class="table-danger text-center">
+          <tr>
+            <th>Fecha</th>
+            <th>Evento</th>
+            <th>Peleador 1</th>
+            <th>Peleador 2</th>
+            <th>Ganador</th>
+            <th>Método</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let pelea of peleas">
+            <td>{{ pelea.date }}</td>
+            <td>{{ pelea.event }}</td>
+            <td>{{ pelea.fighter_1 }}</td>
+            <td>{{ pelea.fighter_2 }}</td>
+            <td>{{ pelea.winner }}</td>
+            <td>{{ pelea.method }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
