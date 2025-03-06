@@ -10,6 +10,7 @@ import { ListadoPeleasAnioComponent } from './listado-peleas-anio/listado-peleas
 import { ListadoPeleasPeleadorComponent } from './listado-peleas-peleador/listado-peleas-peleador.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgOptimizedImage,
     FormsModule,
-    ListadoPeleasEventoComponent,  // 🔹 Ahora en imports
-    ListadoPeleasAnioComponent,    // 🔹 Ahora en imports
-    ListadoPeleasPeleadorComponent // 🔹 Ahora en imports
+    ListadoPeleasEventoComponent,
+    ListadoPeleasAnioComponent,
+    ListadoPeleasPeleadorComponent
   ],
   providers: [
     provideHttpClient()

@@ -1,37 +1,37 @@
-<div class="container mt-5">
-  <div class="card p-4 shadow-lg">
-    <h2 class="text-center text-danger">Buscar Peleas por Año</h2>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" [(ngModel)]="anio" placeholder="Ingrese un año (ej. 2018)">
-      <button class="btn btn-danger" (click)="buscarPorAnio()">Buscar</button>
+  <div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+      <h2 class="text-center text-danger">Buscar Peleas por Año</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="anio" placeholder="Ingrese un año (ej. 2018)">
+        <button class="btn btn-danger" (click)="buscarPorAnio()">Buscar</button>
+      </div>
     </div>
-  </div>
 
-  <div *ngIf="peleas.length > 0" class="mt-4">
-    <h3 class="text-center text-white">Resultados:</h3>
-    <div class="table-responsive">
-      <table class="table table-dark table-striped table-bordered">
-        <thead class="table-danger text-center">
-          <tr>
-            <th>Fecha</th>
-            <th>Evento</th>
-            <th>Peleador 1</th>
-            <th>Peleador 2</th>
-            <th>Ganador</th>
-            <th>Método</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          <tr *ngFor="let pelea of peleas">
-            <td>{{ pelea.date }}</td>
-            <td>{{ pelea.event }}</td>
-            <td>{{ pelea.fighter_1 }}</td>
-            <td>{{ pelea.fighter_2 }}</td>
-            <td>{{ pelea.winner }}</td>
-            <td>{{ pelea.method }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div *ngIf="peleas.length > 0" class="mt-4">
+      <h3 class="text-center text-white">Resultados:</h3>
+      <div class="table-responsive">
+        <table class="table table-dark table-striped table-bordered">
+          <thead class="table-danger text-center">
+            <tr>
+              <th>Fecha</th>
+              <th>Evento</th>
+              <th>Peleador 1</th>
+              <th>Peleador 2</th>
+              <th>Ganador</th>
+              <th>Método</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let pelea of peleas">
+              <td>{{ pelea.date }}</td>
+              <td>{{ pelea.event }}</td>
+              <td>{{ pelea.fighter_1 }}</td>
+              <td>{{ pelea.fighter_2 }}</td>
+              <td>{{ pelea.winner }}</td>
+              <td>{{ pelea.method }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
