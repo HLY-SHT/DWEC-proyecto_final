@@ -15,15 +15,15 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
-    Pagina404Component,
-    ListadoPeleasEventoComponent,
-    ListadoPeleasAnioComponent,
-    ListadoPeleasPeleadorComponent
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ListadoPeleasEventoComponent,  // 🔹 Ahora en imports
+    ListadoPeleasAnioComponent,    // 🔹 Ahora en imports
+    ListadoPeleasPeleadorComponent // 🔹 Ahora en imports
   ],
   providers: [
     provideHttpClient()

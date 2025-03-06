@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { PeleasService } from '../peleas.service';
 import { Ipeleas } from '../ipeleas';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // <-- Agregar esto
 
 @Component({
   selector: 'app-listado-peleas-peleador',
   standalone: true,
+  imports: [CommonModule, FormsModule], // <-- Agregar FormsModule aquí
   templateUrl: './listado-peleas-peleador.component.html',
   styleUrls: ['./listado-peleas-peleador.component.css']
 })

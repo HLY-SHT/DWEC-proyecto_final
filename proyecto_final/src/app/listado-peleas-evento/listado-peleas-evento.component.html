@@ -1,5 +1,9 @@
 <h2>Buscar Peleas por Evento</h2>
+
+
 <input type="text" [(ngModel)]="evento" placeholder="Ingrese número de evento o apellido del luchador">
+
+
 <button (click)="buscarPorEvento()">Buscar</button>
 
 <div *ngIf="peleas.length > 0">
