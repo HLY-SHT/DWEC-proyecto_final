@@ -4,7 +4,7 @@ Esta es una aplicación desarrollada en Angular que consume una API para obtener
 
 ## Características
 - Buscar peleas por año.
-- Buscar peleas por número de evento o apellido del luchador.
+- Buscar peleas por número de evento.
 - Buscar peleas por nombre del peleador.
 - Uso de `HttpClient` para realizar peticiones HTTP a la API.
 - Procesamiento de respuestas con datos JSON anidados en HTML.
@@ -23,12 +23,6 @@ Esta es una aplicación desarrollada en Angular que consume una API para obtener
 Asegúrate de tener instalado Node.js y Angular CLI:
 ```sh
 npm install -g @angular/cli
-```
-
-### Clonar el repositorio
-```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
 ```
 
 ### Instalar dependencias
@@ -74,10 +68,7 @@ Se utiliza la API de `https://fightingtomatoes.com/API` para obtener los datos d
 - **Obtener peleas por peleador:** `https://fightingtomatoes.com/API/{api-key}/any/any/{fighter}`
 
 ## Autores
-- [Tu Nombre]
-- [Tu Email]
-- [Tu GitHub]
+- Manuel Valero Cortés
+- mvc478@gmail.com
 
-## Licencia
-Este proyecto está bajo la licencia MIT. Puedes consultar el archivo `LICENSE` para más detalles.
 
